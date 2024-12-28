@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>maptial.xyz.vectorthree.VectorThree</title>
+    <meta name="generator" content="pydoctor 24.11.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          maptial <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="maptial.xyz.vectorthree.VectorThree.html" class="internal-link" title="This class"><wbr></wbr>Vector<wbr></wbr>Three</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#distance" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.distance">distance</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dot_product" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.dot_product">dot<wbr></wbr>_product</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_coords" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.from_coords">from<wbr></wbr>_coords</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_angle" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_angle">get<wbr></wbr>_angle</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_by_idx" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_by_idx">get<wbr></wbr>_by<wbr></wbr>_idx</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_key" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_key">get<wbr></wbr>_key</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_point_pos" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_point_pos">get<wbr></wbr>_point<wbr></wbr>_pos</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#magnitude" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.magnitude">magnitude</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#make_from_key" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.make_from_key">make<wbr></wbr>_from<wbr></wbr>_key</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#put_by_idx" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.put_by_idx">put<wbr></wbr>_by<wbr></wbr>_idx</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#A" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.A">A</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#B" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.B">B</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#C" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.C">C</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#npy" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.npy">npy</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#Valid" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.Valid"><wbr></wbr>Valid</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="maptial.xyz.vectorthree.html" class="internal-link" title="The parent of this class">vectorthree</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.vectorthree.VectorThree.html" class="internal-link" title="maptial.xyz.vectorthree.VectorThree"><wbr></wbr>Vector<wbr></wbr>Three</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.vectorthree.html#v3_add" class="internal-link" title="maptial.xyz.vectorthree.v3_add">v3<wbr></wbr>_add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.vectorthree.html#v3_divide" class="internal-link" title="maptial.xyz.vectorthree.v3_divide">v3<wbr></wbr>_divide</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.vectorthree.html#v3_multiply" class="internal-link" title="maptial.xyz.vectorthree.v3_multiply">v3<wbr></wbr>_multiply</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.vectorthree.html#v3_subtract" class="internal-link" title="maptial.xyz.vectorthree.v3_subtract">v3<wbr></wbr>_subtract</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">maptial</a></code><wbr></wbr>.<code><a href="maptial.xyz.html" class="internal-link" title="maptial.xyz">xyz</a></code><wbr></wbr>.<code><a href="maptial.xyz.vectorthree.html" class="internal-link" title="maptial.xyz.vectorthree">vectorthree</a></code><wbr></wbr>.<code><a href="maptial.xyz.vectorthree.VectorThree.html" class="internal-link" title="maptial.xyz.vectorthree.VectorThree">VectorThree</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">VectorThree</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.__init__">VectorThree(a, b, c, abc)</a></code></p>
+          <p><a href="classIndex.html#maptial.xyz.vectorthree.VectorThree">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id84">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#distance" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.distance">distance</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#dot_product" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.dot_product">dot<wbr></wbr>_product</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#from_coords" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.from_coords">from<wbr></wbr>_coords</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_angle" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_angle">get<wbr></wbr>_angle</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_by_idx" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_by_idx">get<wbr></wbr>_by<wbr></wbr>_idx</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_key" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_key">get<wbr></wbr>_key</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_point_pos" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.get_point_pos">get<wbr></wbr>_point<wbr></wbr>_pos</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#magnitude" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.magnitude">magnitude</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#make_from_key" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.make_from_key">make<wbr></wbr>_from<wbr></wbr>_key</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#put_by_idx" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.put_by_idx">put<wbr></wbr>_by<wbr></wbr>_idx</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#A" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.A">A</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#B" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.B">B</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#C" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.C">C</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#npy" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.npy">npy</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#Valid" class="internal-link" title="maptial.xyz.vectorthree.VectorThree.Valid"><wbr></wbr>Valid</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, a=0.0, b=0.0, c=0.0, abc=[<wbr></wbr>0.0, <wbr></wbr>0.0, <wbr></wbr>0.0])</span>:
+    
+    <a class="headerLink" href="#__init__" title="maptial.xyz.vectorthree.VectorThree.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.distance">
+    
+  </a>
+  <a name="distance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">distance</span><span class="function-signature">(self, ABC)</span>:
+    
+    <a class="headerLink" href="#distance" title="maptial.xyz.vectorthree.VectorThree.distance">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.dot_product">
+    
+  </a>
+  <a name="dot_product">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">dot_product</span><span class="function-signature">(self, ABC)</span>:
+    
+    <a class="headerLink" href="#dot_product" title="maptial.xyz.vectorthree.VectorThree.dot_product">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.from_coords">
+    
+  </a>
+  <a name="from_coords">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">from_coords</span><span class="function-signature">(self, coords)</span>:
+    
+    <a class="headerLink" href="#from_coords" title="maptial.xyz.vectorthree.VectorThree.from_coords">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.get_angle">
+    
+  </a>
+  <a name="get_angle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_angle</span><span class="function-signature">(self, ABC)</span>:
+    
+    <a class="headerLink" href="#get_angle" title="maptial.xyz.vectorthree.VectorThree.get_angle">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.get_by_idx">
+    
+  </a>
+  <a name="get_by_idx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_by_idx</span><span class="function-signature">(self, idx)</span>:
+    
+    <a class="headerLink" href="#get_by_idx" title="maptial.xyz.vectorthree.VectorThree.get_by_idx">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.get_key">
+    
+  </a>
+  <a name="get_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_key</span><span class="function-signature">(self, rnd=4)</span>:
+    
+    <a class="headerLink" href="#get_key" title="maptial.xyz.vectorthree.VectorThree.get_key">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.get_point_pos">
+    
+  </a>
+  <a name="get_point_pos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_point_pos</span><span class="function-signature">(self, samples, width)</span>:
+    
+    <a class="headerLink" href="#get_point_pos" title="maptial.xyz.vectorthree.VectorThree.get_point_pos">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.magnitude">
+    
+  </a>
+  <a name="magnitude">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">magnitude</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#magnitude" title="maptial.xyz.vectorthree.VectorThree.magnitude">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.make_from_key">
+    
+  </a>
+  <a name="make_from_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">make_from_key</span><span class="function-signature">(self, key)</span>:
+    
+    <a class="headerLink" href="#make_from_key" title="maptial.xyz.vectorthree.VectorThree.make_from_key">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.put_by_idx">
+    
+  </a>
+  <a name="put_by_idx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">put_by_idx</span><span class="function-signature">(self, idx, val)</span>:
+    
+    <a class="headerLink" href="#put_by_idx" title="maptial.xyz.vectorthree.VectorThree.put_by_idx">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.A">
+    
+  </a>
+  <a name="A">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">A</span> =
+    
+    <a class="headerLink" href="#A" title="maptial.xyz.vectorthree.VectorThree.A">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.B">
+    
+  </a>
+  <a name="B">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">B</span> =
+    
+    <a class="headerLink" href="#B" title="maptial.xyz.vectorthree.VectorThree.B">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.C">
+    
+  </a>
+  <a name="C">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">C</span> =
+    
+    <a class="headerLink" href="#C" title="maptial.xyz.vectorthree.VectorThree.C">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.npy">
+    
+  </a>
+  <a name="npy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">npy</span> =
+    
+    <a class="headerLink" href="#npy" title="maptial.xyz.vectorthree.VectorThree.npy">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.vectorthree.VectorThree.Valid">
+    
+  </a>
+  <a name="Valid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">Valid</span>: <code>bool</code> =
+    
+    <a class="headerLink" href="#Valid" title="maptial.xyz.vectorthree.VectorThree.Valid">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for maptial,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.1 at 2024-12-28 11:33:00.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

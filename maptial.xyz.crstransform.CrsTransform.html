@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>maptial.xyz.crstransform.CrsTransform</title>
+    <meta name="generator" content="pydoctor 24.11.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          maptial <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="maptial.xyz.crstransform.CrsTransform.html" class="internal-link" title="This class"><wbr></wbr>Crs<wbr></wbr>Transform</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#convert_coords_to_crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_crs">convert<wbr></wbr>_coords<wbr></wbr>_to<wbr></wbr>_crs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#convert_coords_to_xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_xyz">convert<wbr></wbr>_coords<wbr></wbr>_to<wbr></wbr>_xyz</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#crs_to_xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.crs_to_xyz">crs<wbr></wbr>_to<wbr></wbr>_xyz</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#xyz_to_crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.xyz_to_crs">xyz<wbr></wbr>_to<wbr></wbr>_crs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_create_transformation" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._create_transformation">_create<wbr></wbr>_transformation</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_origin" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._make_origin">_make<wbr></wbr>_origin</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_make_ortho" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._make_ortho">_make<wbr></wbr>_ortho</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#angles" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.angles">angles</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#axis_sampling" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.axis_sampling">axis<wbr></wbr>_sampling</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#cell_dims" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.cell_dims">cell<wbr></wbr>_dims</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#crs_starts" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.crs_starts">crs<wbr></wbr>_starts</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deOrthoMat" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.deOrthoMat">de<wbr></wbr>Ortho<wbr></wbr>Mat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#dim_order" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.dim_order">dim<wbr></wbr>_order</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#M_PI" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.M_PI">M<wbr></wbr>_PI</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#map2crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.map2crs">map2crs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#map2xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.map2xyz">map2xyz</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#origin" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.origin">origin</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#orthoMat" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.orthoMat">ortho<wbr></wbr>Mat</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="maptial.xyz.crstransform.html" class="internal-link" title="The parent of this class">crstransform</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.xyz.crstransform.CrsTransform.html" class="internal-link" title="maptial.xyz.crstransform.CrsTransform"><wbr></wbr>Crs<wbr></wbr>Transform</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">maptial</a></code><wbr></wbr>.<code><a href="maptial.xyz.html" class="internal-link" title="maptial.xyz">xyz</a></code><wbr></wbr>.<code><a href="maptial.xyz.crstransform.html" class="internal-link" title="maptial.xyz.crstransform">crstransform</a></code><wbr></wbr>.<code><a href="maptial.xyz.crstransform.CrsTransform.html" class="internal-link" title="maptial.xyz.crstransform.CrsTransform">CrsTransform</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">CrsTransform</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.__init__">CrsTransform(dim_order, crs_starts, axis_sampling, map2crs, ...)</a></code></p>
+          <p><a href="classIndex.html#maptial.xyz.crstransform.CrsTransform">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id70">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#convert_coords_to_crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_crs">convert<wbr></wbr>_coords<wbr></wbr>_to<wbr></wbr>_crs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#convert_coords_to_xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_xyz">convert<wbr></wbr>_coords<wbr></wbr>_to<wbr></wbr>_xyz</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#crs_to_xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.crs_to_xyz">crs<wbr></wbr>_to<wbr></wbr>_xyz</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#xyz_to_crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.xyz_to_crs">xyz<wbr></wbr>_to<wbr></wbr>_crs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#angles" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.angles">angles</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#axis_sampling" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.axis_sampling">axis<wbr></wbr>_sampling</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#cell_dims" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.cell_dims">cell<wbr></wbr>_dims</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#crs_starts" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.crs_starts">crs<wbr></wbr>_starts</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#deOrthoMat" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.deOrthoMat">de<wbr></wbr>Ortho<wbr></wbr>Mat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#dim_order" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.dim_order">dim<wbr></wbr>_order</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#M_PI" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.M_PI">M<wbr></wbr>_PI</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#map2crs" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.map2crs">map2crs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#map2xyz" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.map2xyz">map2xyz</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#origin" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.origin">origin</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#orthoMat" class="internal-link" title="maptial.xyz.crstransform.CrsTransform.orthoMat">ortho<wbr></wbr>Mat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_create_transformation" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._create_transformation">_create<wbr></wbr>_transformation</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_make_origin" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._make_origin">_make<wbr></wbr>_origin</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_make_ortho" class="internal-link" title="maptial.xyz.crstransform.CrsTransform._make_ortho">_make<wbr></wbr>_ortho</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, dim_order, crs_starts, axis_sampling, map2crs, cell_dims, angles)</span>:
+    
+    <a class="headerLink" href="#__init__" title="maptial.xyz.crstransform.CrsTransform.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.convert_coords_to_crs">
+    
+  </a>
+  <a name="convert_coords_to_crs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">convert_coords_to_crs</span><span class="function-signature">(self, xyz_coords)</span>:
+    
+    <a class="headerLink" href="#convert_coords_to_crs" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_crs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.convert_coords_to_xyz">
+    
+  </a>
+  <a name="convert_coords_to_xyz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">convert_coords_to_xyz</span><span class="function-signature">(self, crs_coords)</span>:
+    
+    <a class="headerLink" href="#convert_coords_to_xyz" title="maptial.xyz.crstransform.CrsTransform.convert_coords_to_xyz">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.crs_to_xyz">
+    
+  </a>
+  <a name="crs_to_xyz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">crs_to_xyz</span><span class="function-signature">(self, CRS)</span>:
+    
+    <a class="headerLink" href="#crs_to_xyz" title="maptial.xyz.crstransform.CrsTransform.crs_to_xyz">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.xyz_to_crs">
+    
+  </a>
+  <a name="xyz_to_crs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">xyz_to_crs</span><span class="function-signature">(self, XYZ)</span>:
+    
+    <a class="headerLink" href="#xyz_to_crs" title="maptial.xyz.crstransform.CrsTransform.xyz_to_crs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.angles">
+    
+  </a>
+  <a name="angles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">angles</span> =
+    
+    <a class="headerLink" href="#angles" title="maptial.xyz.crstransform.CrsTransform.angles">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.axis_sampling">
+    
+  </a>
+  <a name="axis_sampling">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">axis_sampling</span> =
+    
+    <a class="headerLink" href="#axis_sampling" title="maptial.xyz.crstransform.CrsTransform.axis_sampling">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.cell_dims">
+    
+  </a>
+  <a name="cell_dims">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">cell_dims</span> =
+    
+    <a class="headerLink" href="#cell_dims" title="maptial.xyz.crstransform.CrsTransform.cell_dims">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.crs_starts">
+    
+  </a>
+  <a name="crs_starts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">crs_starts</span> =
+    
+    <a class="headerLink" href="#crs_starts" title="maptial.xyz.crstransform.CrsTransform.crs_starts">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.deOrthoMat">
+    
+  </a>
+  <a name="deOrthoMat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">deOrthoMat</span> =
+    
+    <a class="headerLink" href="#deOrthoMat" title="maptial.xyz.crstransform.CrsTransform.deOrthoMat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.dim_order">
+    
+  </a>
+  <a name="dim_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">dim_order</span> =
+    
+    <a class="headerLink" href="#dim_order" title="maptial.xyz.crstransform.CrsTransform.dim_order">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.M_PI">
+    
+  </a>
+  <a name="M_PI">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">M_PI</span>: <code>float</code> =
+    
+    <a class="headerLink" href="#M_PI" title="maptial.xyz.crstransform.CrsTransform.M_PI">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.map2crs">
+    
+  </a>
+  <a name="map2crs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">map2crs</span> =
+    
+    <a class="headerLink" href="#map2crs" title="maptial.xyz.crstransform.CrsTransform.map2crs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.map2xyz">
+    
+  </a>
+  <a name="map2xyz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">map2xyz</span>: <code>list[<wbr></wbr>int]</code> =
+    
+    <a class="headerLink" href="#map2xyz" title="maptial.xyz.crstransform.CrsTransform.map2xyz">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.origin">
+    
+  </a>
+  <a name="origin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">origin</span> =
+    
+    <a class="headerLink" href="#origin" title="maptial.xyz.crstransform.CrsTransform.origin">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform.orthoMat">
+    
+  </a>
+  <a name="orthoMat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">orthoMat</span> =
+    
+    <a class="headerLink" href="#orthoMat" title="maptial.xyz.crstransform.CrsTransform.orthoMat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform._create_transformation">
+    
+  </a>
+  <a name="_create_transformation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_create_transformation</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_create_transformation" title="maptial.xyz.crstransform.CrsTransform._create_transformation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform._make_origin">
+    
+  </a>
+  <a name="_make_origin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_origin</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_make_origin" title="maptial.xyz.crstransform.CrsTransform._make_origin">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.xyz.crstransform.CrsTransform._make_ortho">
+    
+  </a>
+  <a name="_make_ortho">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_make_ortho</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_make_ortho" title="maptial.xyz.crstransform.CrsTransform._make_ortho">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for maptial,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.1 at 2024-12-28 11:33:00.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

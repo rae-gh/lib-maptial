@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>maptial.map.mapobject.MapObject</title>
+    <meta name="generator" content="pydoctor 24.11.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          maptial <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="maptial.map.mapobject.MapObject.html" class="internal-link" title="This class"><wbr></wbr>Map<wbr></wbr>Object</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="maptial.map.mapobject.MapObject.__init__">__init__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ccp4_link" class="internal-link" title="maptial.map.mapobject.MapObject.ccp4_link">ccp4<wbr></wbr>_link</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#diff_has" class="internal-link" title="maptial.map.mapobject.MapObject.diff_has">diff<wbr></wbr>_has</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#diff_link" class="internal-link" title="maptial.map.mapobject.MapObject.diff_link">diff<wbr></wbr>_link</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#diff_values" class="internal-link" title="maptial.map.mapobject.MapObject.diff_values">diff<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ebi_link" class="internal-link" title="maptial.map.mapobject.MapObject.ebi_link">ebi<wbr></wbr>_link</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#em_code" class="internal-link" title="maptial.map.mapobject.MapObject.em_code">em<wbr></wbr>_code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#em_link" class="internal-link" title="maptial.map.mapobject.MapObject.em_link">em<wbr></wbr>_link</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#exp_method" class="internal-link" title="maptial.map.mapobject.MapObject.exp_method">exp<wbr></wbr>_method</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#F" class="internal-link" title="maptial.map.mapobject.MapObject.F">F</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#header_as_string" class="internal-link" title="maptial.map.mapobject.MapObject.header_as_string">header<wbr></wbr>_as<wbr></wbr>_string</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#M" class="internal-link" title="maptial.map.mapobject.MapObject.M">M</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#map_header" class="internal-link" title="maptial.map.mapobject.MapObject.map_header">map<wbr></wbr>_header</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pdb_code" class="internal-link" title="maptial.map.mapobject.MapObject.pdb_code">pdb<wbr></wbr>_code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pdb_link" class="internal-link" title="maptial.map.mapobject.MapObject.pdb_link">pdb<wbr></wbr>_link</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#resolution" class="internal-link" title="maptial.map.mapobject.MapObject.resolution">resolution</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#S" class="internal-link" title="maptial.map.mapobject.MapObject.S">S</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#values" class="internal-link" title="maptial.map.mapobject.MapObject.values">values</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="maptial.map.mapobject.html" class="internal-link" title="The parent of this class">mapobject</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.map.mapobject.MapObject.html" class="internal-link" title="maptial.map.mapobject.MapObject"><wbr></wbr>Map<wbr></wbr>Object</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">maptial</a></code><wbr></wbr>.<code><a href="maptial.map.html" class="internal-link" title="maptial.map">map</a></code><wbr></wbr>.<code><a href="maptial.map.mapobject.html" class="internal-link" title="maptial.map.mapobject">mapobject</a></code><wbr></wbr>.<code><a href="maptial.map.mapobject.MapObject.html" class="internal-link" title="maptial.map.mapobject.MapObject">MapObject</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">MapObject</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="maptial.map.mapobject.MapObject.__init__">MapObject(pdb_code)</a></code></p>
+          <p><a href="classIndex.html#maptial.map.mapobject.MapObject">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id10">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="maptial.map.mapobject.MapObject.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#ccp4_link" class="internal-link" title="maptial.map.mapobject.MapObject.ccp4_link">ccp4<wbr></wbr>_link</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#diff_has" class="internal-link" title="maptial.map.mapobject.MapObject.diff_has">diff<wbr></wbr>_has</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#diff_link" class="internal-link" title="maptial.map.mapobject.MapObject.diff_link">diff<wbr></wbr>_link</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#diff_values" class="internal-link" title="maptial.map.mapobject.MapObject.diff_values">diff<wbr></wbr>_values</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#ebi_link" class="internal-link" title="maptial.map.mapobject.MapObject.ebi_link">ebi<wbr></wbr>_link</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#em_code" class="internal-link" title="maptial.map.mapobject.MapObject.em_code">em<wbr></wbr>_code</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#em_link" class="internal-link" title="maptial.map.mapobject.MapObject.em_link">em<wbr></wbr>_link</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#exp_method" class="internal-link" title="maptial.map.mapobject.MapObject.exp_method">exp<wbr></wbr>_method</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#F" class="internal-link" title="maptial.map.mapobject.MapObject.F">F</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#header_as_string" class="internal-link" title="maptial.map.mapobject.MapObject.header_as_string">header<wbr></wbr>_as<wbr></wbr>_string</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#M" class="internal-link" title="maptial.map.mapobject.MapObject.M">M</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#map_header" class="internal-link" title="maptial.map.mapobject.MapObject.map_header">map<wbr></wbr>_header</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pdb_code" class="internal-link" title="maptial.map.mapobject.MapObject.pdb_code">pdb<wbr></wbr>_code</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pdb_link" class="internal-link" title="maptial.map.mapobject.MapObject.pdb_link">pdb<wbr></wbr>_link</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#resolution" class="internal-link" title="maptial.map.mapobject.MapObject.resolution">resolution</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#S" class="internal-link" title="maptial.map.mapobject.MapObject.S">S</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#values" class="internal-link" title="maptial.map.mapobject.MapObject.values">values</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, pdb_code)</span>:
+    
+    <a class="headerLink" href="#__init__" title="maptial.map.mapobject.MapObject.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.ccp4_link">
+    
+  </a>
+  <a name="ccp4_link">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ccp4_link</span> =
+    
+    <a class="headerLink" href="#ccp4_link" title="maptial.map.mapobject.MapObject.ccp4_link">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.diff_has">
+    
+  </a>
+  <a name="diff_has">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">diff_has</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#diff_has" title="maptial.map.mapobject.MapObject.diff_has">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.diff_link">
+    
+  </a>
+  <a name="diff_link">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">diff_link</span> =
+    
+    <a class="headerLink" href="#diff_link" title="maptial.map.mapobject.MapObject.diff_link">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.diff_values">
+    
+  </a>
+  <a name="diff_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">diff_values</span>: <code>list</code> =
+    
+    <a class="headerLink" href="#diff_values" title="maptial.map.mapobject.MapObject.diff_values">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.ebi_link">
+    
+  </a>
+  <a name="ebi_link">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ebi_link</span> =
+    
+    <a class="headerLink" href="#ebi_link" title="maptial.map.mapobject.MapObject.ebi_link">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.em_code">
+    
+  </a>
+  <a name="em_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">em_code</span> =
+    
+    <a class="headerLink" href="#em_code" title="maptial.map.mapobject.MapObject.em_code">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.em_link">
+    
+  </a>
+  <a name="em_link">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">em_link</span> =
+    
+    <a class="headerLink" href="#em_link" title="maptial.map.mapobject.MapObject.em_link">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.exp_method">
+    
+  </a>
+  <a name="exp_method">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">exp_method</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#exp_method" title="maptial.map.mapobject.MapObject.exp_method">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.F">
+    
+  </a>
+  <a name="F">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">F</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#F" title="maptial.map.mapobject.MapObject.F">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.header_as_string">
+    
+  </a>
+  <a name="header_as_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">header_as_string</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#header_as_string" title="maptial.map.mapobject.MapObject.header_as_string">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.M">
+    
+  </a>
+  <a name="M">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">M</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#M" title="maptial.map.mapobject.MapObject.M">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.map_header">
+    
+  </a>
+  <a name="map_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">map_header</span>: <code>dict</code> =
+    
+    <a class="headerLink" href="#map_header" title="maptial.map.mapobject.MapObject.map_header">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.pdb_code">
+    
+  </a>
+  <a name="pdb_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pdb_code</span> =
+    
+    <a class="headerLink" href="#pdb_code" title="maptial.map.mapobject.MapObject.pdb_code">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.pdb_link">
+    
+  </a>
+  <a name="pdb_link">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pdb_link</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#pdb_link" title="maptial.map.mapobject.MapObject.pdb_link">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.resolution">
+    
+  </a>
+  <a name="resolution">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">resolution</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#resolution" title="maptial.map.mapobject.MapObject.resolution">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.S">
+    
+  </a>
+  <a name="S">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">S</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#S" title="maptial.map.mapobject.MapObject.S">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.mapobject.MapObject.values">
+    
+  </a>
+  <a name="values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">values</span>: <code>list</code> =
+    
+    <a class="headerLink" href="#values" title="maptial.map.mapobject.MapObject.values">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for maptial,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.1 at 2024-12-28 11:33:00.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

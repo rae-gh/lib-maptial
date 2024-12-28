@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>maptial.map.maploader.MapLoader</title>
+    <meta name="generator" content="pydoctor 24.11.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          maptial <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="maptial.map.maploader.MapLoader.html" class="internal-link" title="This class"><wbr></wbr>Map<wbr></wbr>Loader</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="maptial.map.maploader.MapLoader.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#already_started_map" class="internal-link" title="maptial.map.maploader.MapLoader.already_started_map">already<wbr></wbr>_started<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#already_started_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.already_started_pdb">already<wbr></wbr>_started<wbr></wbr>_pdb</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#cleanup" class="internal-link" title="maptial.map.maploader.MapLoader.cleanup">cleanup</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#download" class="internal-link" title="maptial.map.maploader.MapLoader.download">download</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#download_map" class="internal-link" title="maptial.map.maploader.MapLoader.download_map">download<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#download_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.download_pdb">download<wbr></wbr>_pdb</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#exists" class="internal-link" title="maptial.map.maploader.MapLoader.exists">exists</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#exists_map" class="internal-link" title="maptial.map.maploader.MapLoader.exists_map">exists<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#exists_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.exists_pdb">exists<wbr></wbr>_pdb</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_or_make_func" class="internal-link" title="maptial.map.maploader.MapLoader.get_or_make_func">get<wbr></wbr>_or<wbr></wbr>_make<wbr></wbr>_func</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load" class="internal-link" title="maptial.map.maploader.MapLoader.load">load</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_map" class="internal-link" title="maptial.map.maploader.MapLoader.load_map">load<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.load_pdb">load<wbr></wbr>_pdb</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_values" class="internal-link" title="maptial.map.maploader.MapLoader.load_values">load<wbr></wbr>_values</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#success" class="internal-link" title="maptial.map.maploader.MapLoader.success">success</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#wait_for_load" class="internal-link" title="maptial.map.maploader.MapLoader.wait_for_load">wait<wbr></wbr>_for<wbr></wbr>_load</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#write_done" class="internal-link" title="maptial.map.maploader.MapLoader.write_done">write<wbr></wbr>_done</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#write_starting_map" class="internal-link" title="maptial.map.maploader.MapLoader.write_starting_map">write<wbr></wbr>_starting<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#write_starting_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.write_starting_pdb">write<wbr></wbr>_starting<wbr></wbr>_pdb</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_create_mapdata_em" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapdata_em">_create<wbr></wbr>_mapdata<wbr></wbr>_em</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_create_mapheader" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapheader">_create<wbr></wbr>_mapheader</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_create_mapvalues" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapvalues">_create<wbr></wbr>_mapvalues</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_fetch_maplink_em" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_maplink_em">_fetch<wbr></wbr>_maplink<wbr></wbr>_em</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_fetch_maplink_xray" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_maplink_xray">_fetch<wbr></wbr>_maplink<wbr></wbr>_xray</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_fetch_pdbdata" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_pdbdata">_fetch<wbr></wbr>_pdbdata</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#em_code" class="internal-link" title="maptial.map.maploader.MapLoader.em_code">em<wbr></wbr>_code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#em_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.em_loaded">em<wbr></wbr>_loaded</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#has_both" class="internal-link" title="maptial.map.maploader.MapLoader.has_both">has<wbr></wbr>_both</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#mean" class="internal-link" title="maptial.map.maploader.MapLoader.mean">mean</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#mean_diff" class="internal-link" title="maptial.map.maploader.MapLoader.mean_diff">mean<wbr></wbr>_diff</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#mfunc" class="internal-link" title="maptial.map.maploader.MapLoader.mfunc">mfunc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#mobj" class="internal-link" title="maptial.map.maploader.MapLoader.mobj">mobj</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pdb_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.pdb_loaded">pdb<wbr></wbr>_loaded</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pobj" class="internal-link" title="maptial.map.maploader.MapLoader.pobj">pobj</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#std" class="internal-link" title="maptial.map.maploader.MapLoader.std">std</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#std_diff" class="internal-link" title="maptial.map.maploader.MapLoader.std_diff">std<wbr></wbr>_diff</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#values_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.values_loaded">values<wbr></wbr>_loaded</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#values_loading" class="internal-link" title="maptial.map.maploader.MapLoader.values_loading">values<wbr></wbr>_loading</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_ccp4_binary" class="internal-link" title="maptial.map.maploader.MapLoader._ccp4_binary">_ccp4<wbr></wbr>_binary</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_cif" class="internal-link" title="maptial.map.maploader.MapLoader._cif">_cif</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_diff_binary" class="internal-link" title="maptial.map.maploader.MapLoader._diff_binary">_diff<wbr></wbr>_binary</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_directory" class="internal-link" title="maptial.map.maploader.MapLoader._directory">_directory</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_filepath" class="internal-link" title="maptial.map.maploader.MapLoader._filepath">_filepath</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_filepath_ccp4" class="internal-link" title="maptial.map.maploader.MapLoader._filepath_ccp4">_filepath<wbr></wbr>_ccp4</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_filepath_diff" class="internal-link" title="maptial.map.maploader.MapLoader._filepath_diff">_filepath<wbr></wbr>_diff</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_struc_dict" class="internal-link" title="maptial.map.maploader.MapLoader._struc_dict">_struc<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="maptial.map.maploader.html" class="internal-link" title="The parent of this class">maploader</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="maptial.map.maploader.MapLoader.html" class="internal-link" title="maptial.map.maploader.MapLoader"><wbr></wbr>Map<wbr></wbr>Loader</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">maptial</a></code><wbr></wbr>.<code><a href="maptial.map.html" class="internal-link" title="maptial.map">map</a></code><wbr></wbr>.<code><a href="maptial.map.maploader.html" class="internal-link" title="maptial.map.maploader">maploader</a></code><wbr></wbr>.<code><a href="maptial.map.maploader.MapLoader.html" class="internal-link" title="maptial.map.maploader.MapLoader">MapLoader</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">MapLoader</span>(object):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="maptial.map.maploader.MapLoader.__init__">MapLoader(pdb_code, directory, cif)</a></code></p>
+          <p><a href="classIndex.html#maptial.map.maploader.MapLoader">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id8">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="maptial.map.maploader.MapLoader.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#already_started_map" class="internal-link" title="maptial.map.maploader.MapLoader.already_started_map">already<wbr></wbr>_started<wbr></wbr>_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#already_started_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.already_started_pdb">already<wbr></wbr>_started<wbr></wbr>_pdb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#cleanup" class="internal-link" title="maptial.map.maploader.MapLoader.cleanup">cleanup</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#download" class="internal-link" title="maptial.map.maploader.MapLoader.download">download</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#download_map" class="internal-link" title="maptial.map.maploader.MapLoader.download_map">download<wbr></wbr>_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#download_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.download_pdb">download<wbr></wbr>_pdb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#exists" class="internal-link" title="maptial.map.maploader.MapLoader.exists">exists</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#exists_map" class="internal-link" title="maptial.map.maploader.MapLoader.exists_map">exists<wbr></wbr>_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#exists_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.exists_pdb">exists<wbr></wbr>_pdb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_or_make_func" class="internal-link" title="maptial.map.maploader.MapLoader.get_or_make_func">get<wbr></wbr>_or<wbr></wbr>_make<wbr></wbr>_func</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#load" class="internal-link" title="maptial.map.maploader.MapLoader.load">load</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#load_map" class="internal-link" title="maptial.map.maploader.MapLoader.load_map">load<wbr></wbr>_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#load_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.load_pdb">load<wbr></wbr>_pdb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#load_values" class="internal-link" title="maptial.map.maploader.MapLoader.load_values">load<wbr></wbr>_values</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#success" class="internal-link" title="maptial.map.maploader.MapLoader.success">success</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#wait_for_load" class="internal-link" title="maptial.map.maploader.MapLoader.wait_for_load">wait<wbr></wbr>_for<wbr></wbr>_load</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#write_done" class="internal-link" title="maptial.map.maploader.MapLoader.write_done">write<wbr></wbr>_done</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#write_starting_map" class="internal-link" title="maptial.map.maploader.MapLoader.write_starting_map">write<wbr></wbr>_starting<wbr></wbr>_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#write_starting_pdb" class="internal-link" title="maptial.map.maploader.MapLoader.write_starting_pdb">write<wbr></wbr>_starting<wbr></wbr>_pdb</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#em_code" class="internal-link" title="maptial.map.maploader.MapLoader.em_code">em<wbr></wbr>_code</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#em_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.em_loaded">em<wbr></wbr>_loaded</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#has_both" class="internal-link" title="maptial.map.maploader.MapLoader.has_both">has<wbr></wbr>_both</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mean" class="internal-link" title="maptial.map.maploader.MapLoader.mean">mean</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mean_diff" class="internal-link" title="maptial.map.maploader.MapLoader.mean_diff">mean<wbr></wbr>_diff</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mfunc" class="internal-link" title="maptial.map.maploader.MapLoader.mfunc">mfunc</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#mobj" class="internal-link" title="maptial.map.maploader.MapLoader.mobj">mobj</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pdb_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.pdb_loaded">pdb<wbr></wbr>_loaded</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pobj" class="internal-link" title="maptial.map.maploader.MapLoader.pobj">pobj</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#std" class="internal-link" title="maptial.map.maploader.MapLoader.std">std</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#std_diff" class="internal-link" title="maptial.map.maploader.MapLoader.std_diff">std<wbr></wbr>_diff</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#values_loaded" class="internal-link" title="maptial.map.maploader.MapLoader.values_loaded">values<wbr></wbr>_loaded</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#values_loading" class="internal-link" title="maptial.map.maploader.MapLoader.values_loading">values<wbr></wbr>_loading</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_create_mapdata_em" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapdata_em">_create<wbr></wbr>_mapdata<wbr></wbr>_em</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_create_mapheader" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapheader">_create<wbr></wbr>_mapheader</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_create_mapvalues" class="internal-link" title="maptial.map.maploader.MapLoader._create_mapvalues">_create<wbr></wbr>_mapvalues</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_fetch_maplink_em" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_maplink_em">_fetch<wbr></wbr>_maplink<wbr></wbr>_em</a></code></td>
+    <td>cif file EMDB EMD-6240 'associated EM volume' . pdb file REMARK 900 RELATED ID: EMD-6240   RELATED DB: EMDB</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_fetch_maplink_xray" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_maplink_xray">_fetch<wbr></wbr>_maplink<wbr></wbr>_xray</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_fetch_pdbdata" class="internal-link" title="maptial.map.maploader.MapLoader._fetch_pdbdata">_fetch<wbr></wbr>_pdbdata</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_ccp4_binary" class="internal-link" title="maptial.map.maploader.MapLoader._ccp4_binary">_ccp4<wbr></wbr>_binary</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_cif" class="internal-link" title="maptial.map.maploader.MapLoader._cif">_cif</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_diff_binary" class="internal-link" title="maptial.map.maploader.MapLoader._diff_binary">_diff<wbr></wbr>_binary</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_directory" class="internal-link" title="maptial.map.maploader.MapLoader._directory">_directory</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_filepath" class="internal-link" title="maptial.map.maploader.MapLoader._filepath">_filepath</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_filepath_ccp4" class="internal-link" title="maptial.map.maploader.MapLoader._filepath_ccp4">_filepath<wbr></wbr>_ccp4</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_filepath_diff" class="internal-link" title="maptial.map.maploader.MapLoader._filepath_diff">_filepath<wbr></wbr>_diff</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_struc_dict" class="internal-link" title="maptial.map.maploader.MapLoader._struc_dict">_struc<wbr></wbr>_dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, pdb_code, directory=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, cif=False)</span>:
+    
+    <a class="headerLink" href="#__init__" title="maptial.map.maploader.MapLoader.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.already_started_map">
+    
+  </a>
+  <a name="already_started_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">already_started_map</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#already_started_map" title="maptial.map.maploader.MapLoader.already_started_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.already_started_pdb">
+    
+  </a>
+  <a name="already_started_pdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">already_started_pdb</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#already_started_pdb" title="maptial.map.maploader.MapLoader.already_started_pdb">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.cleanup">
+    
+  </a>
+  <a name="cleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">cleanup</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#cleanup" title="maptial.map.maploader.MapLoader.cleanup">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.download">
+    
+  </a>
+  <a name="download">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">download</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#download" title="maptial.map.maploader.MapLoader.download">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.download_map">
+    
+  </a>
+  <a name="download_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">download_map</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#download_map" title="maptial.map.maploader.MapLoader.download_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.download_pdb">
+    
+  </a>
+  <a name="download_pdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">download_pdb</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#download_pdb" title="maptial.map.maploader.MapLoader.download_pdb">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.exists">
+    
+  </a>
+  <a name="exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">exists</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#exists" title="maptial.map.maploader.MapLoader.exists">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.exists_map">
+    
+  </a>
+  <a name="exists_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">exists_map</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#exists_map" title="maptial.map.maploader.MapLoader.exists_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.exists_pdb">
+    
+  </a>
+  <a name="exists_pdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">exists_pdb</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#exists_pdb" title="maptial.map.maploader.MapLoader.exists_pdb">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.get_or_make_func">
+    
+  </a>
+  <a name="get_or_make_func">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_or_make_func</span><span class="function-signature">(self, interp)</span>:
+    
+    <a class="headerLink" href="#get_or_make_func" title="maptial.map.maploader.MapLoader.get_or_make_func">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.load">
+    
+  </a>
+  <a name="load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#load" title="maptial.map.maploader.MapLoader.load">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.load_map">
+    
+  </a>
+  <a name="load_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_map</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#load_map" title="maptial.map.maploader.MapLoader.load_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.load_pdb">
+    
+  </a>
+  <a name="load_pdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_pdb</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#load_pdb" title="maptial.map.maploader.MapLoader.load_pdb">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.load_values">
+    
+  </a>
+  <a name="load_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_values</span><span class="function-signature">(self, diff=True, adj_zero=True)</span>:
+    
+    <a class="headerLink" href="#load_values" title="maptial.map.maploader.MapLoader.load_values">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.success">
+    
+  </a>
+  <a name="success">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">success</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#success" title="maptial.map.maploader.MapLoader.success">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.wait_for_load">
+    
+  </a>
+  <a name="wait_for_load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">wait_for_load</span><span class="function-signature">(self, log_level=0)</span>:
+    
+    <a class="headerLink" href="#wait_for_load" title="maptial.map.maploader.MapLoader.wait_for_load">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.write_done">
+    
+  </a>
+  <a name="write_done">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">write_done</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#write_done" title="maptial.map.maploader.MapLoader.write_done">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.write_starting_map">
+    
+  </a>
+  <a name="write_starting_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">write_starting_map</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#write_starting_map" title="maptial.map.maploader.MapLoader.write_starting_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.write_starting_pdb">
+    
+  </a>
+  <a name="write_starting_pdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">write_starting_pdb</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#write_starting_pdb" title="maptial.map.maploader.MapLoader.write_starting_pdb">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.em_code">
+    
+  </a>
+  <a name="em_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">em_code</span> =
+    
+    <a class="headerLink" href="#em_code" title="maptial.map.maploader.MapLoader.em_code">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.em_loaded">
+    
+  </a>
+  <a name="em_loaded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">em_loaded</span> =
+    
+    <a class="headerLink" href="#em_loaded" title="maptial.map.maploader.MapLoader.em_loaded">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.has_both">
+    
+  </a>
+  <a name="has_both">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">has_both</span>: <code>bool</code> =
+    
+    <a class="headerLink" href="#has_both" title="maptial.map.maploader.MapLoader.has_both">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.mean">
+    
+  </a>
+  <a name="mean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mean</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#mean" title="maptial.map.maploader.MapLoader.mean">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.mean_diff">
+    
+  </a>
+  <a name="mean_diff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mean_diff</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#mean_diff" title="maptial.map.maploader.MapLoader.mean_diff">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.mfunc">
+    
+  </a>
+  <a name="mfunc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mfunc</span> =
+    
+    <a class="headerLink" href="#mfunc" title="maptial.map.maploader.MapLoader.mfunc">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.mobj">
+    
+  </a>
+  <a name="mobj">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mobj</span> =
+    
+    <a class="headerLink" href="#mobj" title="maptial.map.maploader.MapLoader.mobj">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.pdb_loaded">
+    
+  </a>
+  <a name="pdb_loaded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pdb_loaded</span> =
+    
+    <a class="headerLink" href="#pdb_loaded" title="maptial.map.maploader.MapLoader.pdb_loaded">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.pobj">
+    
+  </a>
+  <a name="pobj">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pobj</span> =
+    
+    <a class="headerLink" href="#pobj" title="maptial.map.maploader.MapLoader.pobj">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.std">
+    
+  </a>
+  <a name="std">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">std</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#std" title="maptial.map.maploader.MapLoader.std">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.std_diff">
+    
+  </a>
+  <a name="std_diff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">std_diff</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#std_diff" title="maptial.map.maploader.MapLoader.std_diff">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.values_loaded">
+    
+  </a>
+  <a name="values_loaded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">values_loaded</span>: <code>bool</code> =
+    
+    <a class="headerLink" href="#values_loaded" title="maptial.map.maploader.MapLoader.values_loaded">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="maptial.map.maploader.MapLoader.values_loading">
+    
+  </a>
+  <a name="values_loading">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">values_loading</span>: <code>bool</code> =
+    
+    <a class="headerLink" href="#values_loading" title="maptial.map.maploader.MapLoader.values_loading">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._create_mapdata_em">
+    
+  </a>
+  <a name="_create_mapdata_em">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_create_mapdata_em</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_create_mapdata_em" title="maptial.map.maploader.MapLoader._create_mapdata_em">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._create_mapheader">
+    
+  </a>
+  <a name="_create_mapheader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_create_mapheader</span><span class="function-signature">(self, ccp4_binary)</span>:
+    
+    <a class="headerLink" href="#_create_mapheader" title="maptial.map.maploader.MapLoader._create_mapheader">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._create_mapvalues">
+    
+  </a>
+  <a name="_create_mapvalues">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_create_mapvalues</span><span class="function-signature">(self, diff, adj_zero=True)</span>:
+    
+    <a class="headerLink" href="#_create_mapvalues" title="maptial.map.maploader.MapLoader._create_mapvalues">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._fetch_maplink_em">
+    
+  </a>
+  <a name="_fetch_maplink_em">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_fetch_maplink_em</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_fetch_maplink_em" title="maptial.map.maploader.MapLoader._fetch_maplink_em">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>cif file EMDB EMD-6240 'associated EM volume' . pdb file REMARK 900 RELATED ID: EMD-6240   RELATED DB: EMDB</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._fetch_maplink_xray">
+    
+  </a>
+  <a name="_fetch_maplink_xray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_fetch_maplink_xray</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_fetch_maplink_xray" title="maptial.map.maploader.MapLoader._fetch_maplink_xray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._fetch_pdbdata">
+    
+  </a>
+  <a name="_fetch_pdbdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_fetch_pdbdata</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#_fetch_pdbdata" title="maptial.map.maploader.MapLoader._fetch_pdbdata">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._ccp4_binary">
+    
+  </a>
+  <a name="_ccp4_binary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_ccp4_binary</span> =
+    
+    <a class="headerLink" href="#_ccp4_binary" title="maptial.map.maploader.MapLoader._ccp4_binary">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._cif">
+    
+  </a>
+  <a name="_cif">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_cif</span> =
+    
+    <a class="headerLink" href="#_cif" title="maptial.map.maploader.MapLoader._cif">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._diff_binary">
+    
+  </a>
+  <a name="_diff_binary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_diff_binary</span> =
+    
+    <a class="headerLink" href="#_diff_binary" title="maptial.map.maploader.MapLoader._diff_binary">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._directory">
+    
+  </a>
+  <a name="_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_directory</span> =
+    
+    <a class="headerLink" href="#_directory" title="maptial.map.maploader.MapLoader._directory">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._filepath">
+    
+  </a>
+  <a name="_filepath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_filepath</span> =
+    
+    <a class="headerLink" href="#_filepath" title="maptial.map.maploader.MapLoader._filepath">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._filepath_ccp4">
+    
+  </a>
+  <a name="_filepath_ccp4">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_filepath_ccp4</span> =
+    
+    <a class="headerLink" href="#_filepath_ccp4" title="maptial.map.maploader.MapLoader._filepath_ccp4">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._filepath_diff">
+    
+  </a>
+  <a name="_filepath_diff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_filepath_diff</span> =
+    
+    <a class="headerLink" href="#_filepath_diff" title="maptial.map.maploader.MapLoader._filepath_diff">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="maptial.map.maploader.MapLoader._struc_dict">
+    
+  </a>
+  <a name="_struc_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_struc_dict</span> =
+    
+    <a class="headerLink" href="#_struc_dict" title="maptial.map.maploader.MapLoader._struc_dict">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for maptial,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.1 at 2024-12-28 11:33:00.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
