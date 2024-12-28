@@ -38,6 +38,11 @@ for i in range(len(central_atoms)):
 
 filename = "SHOW"
 for cc,ll,pp in slice_vectors:
+  vals2d = mf.get_slice(cc,ll,pp,width,samples,interpolation,deriv=1,ret_type="2d")
+  mplot = mph.MapPlotHelp(filename)
+  mplot.make_plot_slice_2d(vals2d,min_percent=1,max_percent=1,samples=samples,width=width,points=[cc,ll,pp],title=pdb_code, hue="BW")
+
+for cc,ll,pp in slice_vectors:
   vals2d = mf.get_slice(cc,ll,pp,width,samples,interpolation,deriv=2,ret_type="2d")
   mplot = mph.MapPlotHelp(filename)
   mplot.make_plot_slice_2d(vals2d,min_percent=1,max_percent=1,samples=samples,width=width,points=[cc,ll,pp],title=pdb_code, hue="RB")
@@ -46,3 +51,6 @@ for cc,ll,pp in slice_vectors:
   vals2db = mf.get_slice(cc,ll,pp,width,samples,interpolation,deriv=3,ret_type="2d")
   mplot = mph.MapPlotHelp(filename)
   mplot.make_plot_slice_2d(vals2db,min_percent=1,max_percent=1,samples=samples,width=width,points=[cc,ll,pp],title=pdb_code, hue="CP",plot_type="contour")
+
+
+  
