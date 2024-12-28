@@ -10,12 +10,6 @@ from maptial.xyz import vectorthree as v3
 import math
 import numpy as np
 
-#from . import invariant as ivm
-from . import iv1
-from . import iv2
-from . import iv3
-from . import iv5
-
 import numpy as np
 
 class Thevenaz(object):

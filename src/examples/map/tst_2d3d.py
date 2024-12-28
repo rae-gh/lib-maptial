@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 import sys
-import os
 from pathlib import Path
 import sys
 DATADIR = str(Path(__file__).resolve().parent.parent.parent )+ "/data/"

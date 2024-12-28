@@ -7,7 +7,7 @@ This class handles 3d matrices
 import math
 
 # class interface
-from . import vectorthree as v3
+from maptial.xyz import vectorthree as v3
 
 class MatrixThreeY(object):
     def __init__(self, vals = [0,0,0,0,0,0,0,0,0]):

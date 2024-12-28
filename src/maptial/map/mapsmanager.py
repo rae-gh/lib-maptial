@@ -12,7 +12,7 @@
 import threading #https://stackoverflow.com/questions/2905965/creating-threads-in-python
 import datetime
 
-from . import maploader as moad
+from maptial.map import maploader as moad
 
 class MapsManager:
     _instance = None

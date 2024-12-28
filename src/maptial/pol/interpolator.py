@@ -5,10 +5,9 @@ from maptial.xyz import matrix3d as d3
 import math
 import numpy as np
 
-#from . import invariant as ivm
-from . import iv1
-from . import iv3
-from . import iv5
+from maptial.pol import iv1
+from maptial.pol import iv3
+from maptial.pol import iv5
 
 ### Factory method for creation ##############################################################
 def create_interpolator(method, values, FMS, as_sd=0, log_level=0):    

@@ -6,8 +6,7 @@ This class handles transformations in 3d space from a plabe defined by 3 given p
 """
 
 import math
-from . import vectorthree as v3
-from . import matrix3d as d3
+from maptial.xyz import matrix3d as d3
 
 class GridMaker(object):
             

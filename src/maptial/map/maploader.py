@@ -18,9 +18,9 @@ import warnings
 from Bio import BiopythonWarning
 warnings.simplefilter('ignore', BiopythonWarning)
 
-from . import mapobject as mobj
-from . import pdbobject as pobj
-from . import mapfunctions as mfun
+from maptial.map import mapobject as mobj
+from maptial.geo import pdbobject as pobj
+from maptial.map import mapfunctions as mfun
 
 class MapLoader(object):
     def __init__(self, pdb_code, directory="", cif=False):

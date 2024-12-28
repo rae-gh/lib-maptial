@@ -5,8 +5,8 @@ Contact Map Maker. This class calculates the contact distances between 2 or 3 at
 
 from operator import itemgetter
 import pandas as pd
-from . import pdbobject as po
-from . import geocalculator as calc
+from maptial.geo import pdbobject as po
+from maptial.geo import geocalculator as calc
 from maptial.xyz import vectorthree as v3
 
 

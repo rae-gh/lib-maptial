@@ -5,9 +5,9 @@ This class handles transformations in 3d space from a plabe defined by 3 given p
 
 """
 
-from . import vectorthree as v3
-from . import matrixthree as m3
-from . import matrix3d as d3
+from maptial.xyz import vectorthree as v3
+from maptial.xyz import matrixthree as m3
+from maptial.xyz import matrix3d as d3
 
 import math
 
