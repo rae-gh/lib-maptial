@@ -34,12 +34,12 @@ class MapsManager:
         cls.CACHE = cache
     
     ##  Map Store ##    
-    def get_or_create(cls,pdb_code,file=1,header=1,values=1): #0 is no, 1 is in thread, 2 is new thread
+    def get_or_create(cls,pdb_code,file=1,header=1,values=1,cif=False): #0 is no, 1 is in thread, 2 is new thread
         po = None
         if cls.exists_map(pdb_code):
             po = cls.get_map(pdb_code)            
         else:
-            po = moad.MapLoader(pdb_code, directory=cls.DATADIR, cif=False)
+            po = moad.MapLoader(pdb_code, directory=cls.DATADIR, cif=cif)
             cls.strge_container[pdb_code] = po
         if not po.exists():
             if file == 1:

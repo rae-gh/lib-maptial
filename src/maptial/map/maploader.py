@@ -20,6 +20,7 @@ warnings.simplefilter('ignore', BiopythonWarning)
 
 from maptial.map import mapobject as mobj
 from maptial.geo import pdbobject as pobj
+from maptial.geo import pdbloader as pload
 from maptial.map import mapfunctions as mfun
 
 class MapLoader(object):
@@ -27,6 +28,7 @@ class MapLoader(object):
         # PUBLIC INTERFACE
         self.mobj = mobj.MapObject(pdb_code)
         self.pobj = pobj.PdbObject(pdb_code)
+        self.pload = pload.PdbLoader(pdb_code, directory=directory, cif=cif,source="ebi")
         
         # Private data
         self._ccp4_binary = None
@@ -152,15 +154,33 @@ class MapLoader(object):
         
 
     def load_pdb(self):
-        if self._cif:
-            structure = MMCIFParser().get_structure(self.mobj.pdb_code, self._filepath)
+        self.pobj = self.pload.load_pdb()
+        # Having loaded the pdb object there is some info we need for ED        
+        if self._cif:           
+            self._struc_dict = MMCIF2Dict(self._filepath)
+            found_em = False
+            dbs = self._struc_dict['_database_2.database_id']
+            db_vals = self._struc_dict['_database_2.database_code']
+            self.mobj.exp_method = self._struc_dict['_exptl.method'][0]
+            for i in range(0,len(dbs)):
+                db = dbs[i]
+                if db == "EMDB": 
+                    found_em = True
+                    self.mobj.em_code = db_vals[i]
+                    self.em_code = self.mobj.em_code                                                          
+                    self.mobj.resolution = self._struc_dict['_em_diffraction_shell.high_resolution'][0]
+                    self.mobj.em_link = f"https://www.ebi.ac.uk/emdb/{self.em_code}"
+                    break
+            if not found_em:
+                self.mobj.resolution = self._struc_dict['_reflns.d_resolution_high'][0]                                            
+            self.has_both = False           
         else:
-            structure = PDBParser(PERMISSIVE=True).get_structure(self.mobj.pdb_code, self._filepath)                
+            self.mobj.resolution = self.pobj.resolution
+            self.mobj.exp_method = self.pobj.exp_method
             found_em = False
             with open(self._filepath,"r") as fr:
                 lines = fr.readlines()
-                for line in lines:
-                    self.pobj.add_line_string(line)
+                for line in lines:                    
                     #REMARK 900 RELATED ID: EMD-6240   RELATED DB: EMDB                              
                     if "REMARK 900 RELATED ID:" in line and "EMD-" in line and not found_em:
                         found_em=True
@@ -170,11 +190,8 @@ class MapLoader(object):
                         self.has_both = False
                         self.mobj.em_link = f"https://www.ebi.ac.uk/emdb/{self.em_code}"
                 
-        self._struc_dict = MMCIF2Dict(self._filepath)
-        self.mobj.resolution = structure.header["resolution"]
-        self.mobj.exp_method = structure.header["structure_method"]
-
-        # with the structure create a pdbobject
+        
+            
         return True
 
     def load_map(self):        

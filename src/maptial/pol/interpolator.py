@@ -98,6 +98,12 @@ class Interpolator(ABC):
     @abstractmethod
     def get_laplacians(self, xyz):
         pass
+    @abstractmethod
+    def get_criticalpoint(self, x, y, z):
+        pass    
+    @abstractmethod
+    def get_criticalpoints(self, xyz):
+        pass
     ############################################################################################################
     # implemented interface that is the same for all abstractions
 
@@ -139,6 +145,18 @@ class Interpolator(ABC):
             d2z = (xyz_vals[i+5] + xyz_vals[i+6] - 2 * val) / (self.h * self.h)                
             vals.append(self.make_laplacian(d2x,d2y,d2z))
         return vals
+    
+    def get_criticalpoints_list_numerical(self, xyz):
+        xyz = self.get_criticalpoints_extended_list(xyz)
+        xyz_vals = self.get_values(xyz)  
+        vals = []
+        for i in range(0,len(xyz),7):
+            val = xyz_vals[i]
+            d2x = (xyz_vals[i+1] + xyz_vals[i+2] - 2 * val) / (self.h * self.h)
+            d2y = (xyz_vals[i+3] + xyz_vals[i+4] - 2 * val) / (self.h * self.h)
+            d2z = (xyz_vals[i+5] + xyz_vals[i+6] - 2 * val) / (self.h * self.h)                
+            vals.append(self.make_criticalpoint(d2x,d2y,d2z))
+        return vals
 
     def get_radients_individual(self, xyz):
         vals = []
@@ -153,6 +171,13 @@ class Interpolator(ABC):
             val = self.get_laplacian(x,y,z)            
             vals.append(val)
         return vals
+    
+    def get_criticalpoints_individual(self, xyz):
+        vals = []
+        for x,y,z in xyz:
+            val = self.get_criticalpoint(x,y,z)            
+            vals.append(val)
+        return vals
 
     def make_radient(self,dx,dy,dz):
         radient = abs(dx) + abs(dy) + abs(dz)
@@ -162,6 +187,17 @@ class Interpolator(ABC):
     def make_laplacian(self,ddx,ddy,ddz):
         laplacian = ddx + ddy + ddz 
         return laplacian
+        
+    def make_criticalpoint(self,ddx,ddy,ddz):
+        #TOLERANCE = 10000000
+        cp = 0
+        #if abs(ddx + ddy + ddz) < TOLERANCE:
+        for dd in [ddx,ddy,ddz]:
+            if dd < 0:                    
+                cp -= 1
+            else:
+                cp += 1                    
+        return cp
 
     def get_radients_extended_list(self, xyz):
         vals_ext = []
@@ -177,6 +213,25 @@ class Interpolator(ABC):
         return vals_ext
     
     def get_laplacians_extended_list(self, xyz):
+        vals_ext = []
+        for x,y,z in xyz:
+            x,y,z = self.get_adjusted_fms_maybe(x,y,z)                  
+            xmx,xmy,xmz = x - self.h, y, z
+            xpx,xpy,xpz = x + self.h, y, z            
+            ymx,ymy,ymz = x, y - self.h, z
+            ypx,ypy,ypz = x, y + self.h, z
+            zmx,zmy,zmz = x, y, z - self.h
+            zpx,zpy,zpz = x, y, z + self.h            
+            vals_ext.append([x,y,z])
+            vals_ext.append([xmx,xmy,xmz])
+            vals_ext.append([xpx,xpy,xpz])
+            vals_ext.append([ymx,ymy,ymz])
+            vals_ext.append([ypx,ypy,ypz])
+            vals_ext.append([zmx,zmy,zmz])
+            vals_ext.append([zpx,zpy,zpz])
+        return vals_ext
+    
+    def get_criticalpoints_extended_list(self, xyz):
         vals_ext = []
         for x,y,z in xyz:
             x,y,z = self.get_adjusted_fms_maybe(x,y,z)                  
@@ -215,6 +270,14 @@ class Interpolator(ABC):
         yy = self.getDyDy_numerical(x, y, z, val)
         zz = self.getDzDz_numerical(x, y, z, val)
         return self.make_laplacian(xx,yy,zz)
+    
+    def get_criticalpoint_numerical(self, x, y, z):        
+        #xa,ya,za = self.get_adjusted_fms_maybe(x,y,z)
+        val = self.get_value(x, y, z)
+        xx = self.getDxDx_numerical(x, y, z, val)
+        yy = self.getDyDy_numerical(x, y, z, val)
+        zz = self.getDzDz_numerical(x, y, z, val)
+        return self.make_criticalpoint(xx,yy,zz)
         
     def getDxDx_numerical(self, x, y, z, val):        
         xa,ya,za = x - self.h, y, z#self.get_adjusted_fms_maybe(x - self.h, y, z)
@@ -403,7 +466,9 @@ class Interpolator(ABC):
                 for j in range(b):                    
                     vec = unit_coords.get(i,j,0)
                     coords.append([vec.A,vec.B,vec.C])                
-            if deriv == 2:
+            if deriv == 3:
+                vals = self.get_criticalpoints(coords)
+            elif deriv == 2:
                 vals = self.get_laplacians(coords)
             elif deriv == 1:
                 vals = self.get_radients(coords)
@@ -454,7 +519,9 @@ class Interpolator(ABC):
                     for k in range(c):
                         vec = unit_coords.get(i,j,k)
                         coords.append([vec.A,vec.B,vec.C])                
-            if deriv == 2:
+            if deriv == 3:
+                vals = self.get_criticalpoints(coords)
+            elif deriv == 2:
                 vals = self.get_laplacians(coords)
             elif deriv == 1:
                 vals = self.get_radients(coords)
@@ -693,6 +760,12 @@ class Linear(Interpolator):
         for x,y,z in xyz:
             vals.append(0)
         return vals
+    
+    def get_criticalpoints(self, xyz):
+        vals = []
+        for x,y,z in xyz:
+            vals.append(0)
+        return vals
     ## iplement abstract interface ###########################################        
 ####################################################################################################
 ### Multivariate - Linear and Cubic
@@ -733,6 +806,14 @@ class Multivariate(Interpolator):
         ddy = self.get_value_multivariate(zn, yn, xn, coeffs,["y","y"])
         ddz = self.get_value_multivariate(zn, yn, xn, coeffs,["z","z"])
         return self.make_laplacian(ddx,ddy,ddz)
+    
+    def get_criticalpoint(self, x, y, z):
+        u_x, u_y, u_z = self.get_adjusted_fms(x,y,z)
+        xn,yn,zn,coeffs = self.make_coeffs(u_x,u_y,u_z)
+        ddx = self.get_value_multivariate(zn, yn, xn, coeffs,["x","x"])
+        ddy = self.get_value_multivariate(zn, yn, xn, coeffs,["y","y"])
+        ddz = self.get_value_multivariate(zn, yn, xn, coeffs,["z","z"])
+        return self.make_criticalpoint(ddx,ddy,ddz)
         
     def get_values(self, xyz):                
         return self.get_values_list(xyz)
@@ -742,6 +823,9 @@ class Multivariate(Interpolator):
                 
     def get_laplacians(self, xyz):
         return self.get_laplacians_individual(xyz)
+    
+    def get_criticalpoints(self, xyz):
+        return self.get_criticalpoints_individual(xyz)
     ## iplement abstract interface ###########################################
                
     def get_value_multivariate(self, x, y, z, coeffs,wrt=[]):        
@@ -847,6 +931,9 @@ class Bspline(Interpolator):
     def get_laplacian(self, x, y, z):
         return self.get_laplacian_numerical(x,y,z)
     ########################################################################
+    def get_criticalpoint(self, x, y, z):
+        return self.get_criticalpoint_numerical(x,y,z)
+    ########################################################################
     def get_values(self, xyz):                
         return self.get_values_list(xyz)
     
@@ -855,6 +942,9 @@ class Bspline(Interpolator):
                 
     def get_laplacians(self, xyz):
         return self.get_laplacians_individual(xyz)
+    
+    def get_criticalpoints(self, xyz):
+        return self.get_criticalpoints_individual(xyz)
 
     def get_value(self, x, y, z):
         u_x, u_y, u_z = x,y,z        

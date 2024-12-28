@@ -97,13 +97,13 @@ class MapPlotter(object):
                                     colorscale=[(0, "rgb(100,0,0)"),(0.1, "crimson"), (d0, "silver"), (0.9, "blue"),(1, "navy")],
                                     contours=dict(start=absmin,end=absmax,size=(absmax-absmin)/20),
                                     line=dict(width=0.5,color="darkgray"),
-                                    zmin=absmin,zmax=absmax)
+                                    zmin=absmin,zmax=absmax)            
             elif hue == "BR":
                 data_vals = go.Contour(z=vals,showscale=False,
                                     colorscale=[(0, "navy"),(0.1, "blue"), (d0, "silver"), (0.9, "crimson"),(1, "rgb(100,0,0)")],
                                     contours=dict(start=absmin,end=absmax,size=(absmax-absmin)/20),
                                     line=dict(width=0.5,color="darkgray"),
-                                    zmin=absmin,zmax=absmax)
+                                    zmin=absmin,zmax=absmax)            
             else:#GBR
                 data_vals = go.Contour(z=vals,showscale=False, 
                                 colorscale=[(0, "grey"), (d0, "snow"), (d0+0.2, "cornflowerblue"),(0.9, "crimson"),(1.0, "rgb(100,0,0)")],

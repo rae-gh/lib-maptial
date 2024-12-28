@@ -164,7 +164,7 @@ class MapPlotHelp(object):
                                 contours=dict(start=absmin,end=absmax,size=(absmax-absmin)/levels),
                                 text=naybs,   
                                 hovertemplate='......%{z:.4f}<br>%{text}',
-                                line=dict(width=0.5,color="gray"),
+                                line=dict(width=0.2,color="gray"),
                                 zmin=absmin,zmax=absmax,name='')
             elif plot_type == "heatmap":
                 data_vals = go.Heatmap(z=vals,showscale=False, 
@@ -178,7 +178,7 @@ class MapPlotHelp(object):
                                 colorscale=colorscale,
                                 contours=dict(start=absmin,end=absmax,size=(absmax-absmin)/levels),
                                 hovertemplate='......%{z:.4f}',
-                                line=dict(width=0.5,color="gray"),
+                                line=dict(width=0.2,color="gray"),
                                 zmin=absmin,zmax=absmax,name='')
             elif plot_type == "heatmap":
                 data_vals = go.Heatmap(z=vals,showscale=True, 
@@ -287,6 +287,9 @@ class MapPlotHelp(object):
 
         black = f"rgba(0,0,0,{tx})"
         ghost = f"rgba(248,248,255,{tx})"
+        coral = f"rgba(255, 182, 193,{tx})"
+        sky = f"rgba(176, 196, 222,{tx})"
+        
 
         midnight = f"rgba(25,25,112,{tl})"
         maroon = f"rgba(128,0,0,{tu})"
@@ -320,6 +323,13 @@ class MapPlotHelp(object):
                 return [(0,midnight),(0.5,ghost),(1.0,maroon)]
             else:
                 return [(0,midnight),(d0,ghost),(1.0,maroon)]
+        elif hue == "CP":            
+            return [(0,maroon),(0.45,coral),(0.5,grey),(0.55,sky),(1.0,midnight)]            
+        elif hue == "R":
+            if d0 <= 0:
+                return [(0,maroon),(0.5,ghost),(1.0,midnight)]
+            else:
+                return [(0,maroon),(d0,ghost),(1.0,midnight)]
         elif hue == "IG":
             if d0 <= 0:
                 return [(0,indigo),(0.5,ghost),(1.0,sea)]

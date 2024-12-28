@@ -65,7 +65,7 @@ class PdbLoader(object):
         if not loaded:
             self.download_pdb(cif=False)            
             structure = PDBParser(PERMISSIVE=True).get_structure(self.pdb_code, self.pdb_filepath)                                        
-        self.pobj.add_atoms(structure)                
+        self.pobj.add_atoms(structure)          
         #print(structure.header)
         return self.pobj
     """~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""

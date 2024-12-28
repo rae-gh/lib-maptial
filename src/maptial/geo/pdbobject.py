@@ -16,6 +16,7 @@ class PdbObject(object):
         self.exp_method = ""
         self.chains = {}
         self.exc_hetatm = False
+        self.lines = []
               
     def __str__(self):
         return f"{self.pdb_code}\t{self.resolution}\t{self.exp_method}"
@@ -94,6 +95,7 @@ class PdbObject(object):
                                         bfactor = atom.get_bfactor()
                                         occupancy = atom.get_occupancy()
                                         one_atom = PdbAtom(chain,resd,atom_name[0],atom_name,atomNo,disordered,occupancy,bfactor,x,y,z)
+                                        self.add_line_string(atomNo, rid, aa, atom_name, chain, occupant, x, y, z, occupancy, bfactor, atom_name[0])
                                         resd.atoms[atom_name] = one_atom
                                     self.chains[chain][rid] = resd
                                     last_bad = ""
@@ -103,6 +105,35 @@ class PdbObject(object):
             if element in atm:
                 return True, atm
         return False, None
+    
+    # MAP interface
+    def get_coords_key(self,key):
+        atm = self.get_atm_key(key)
+        if atm == {} or atm == None:
+            return "(0,0,0)"
+        return f"({atm['x']},{atm['y']},{atm['z']})"
+
+    def get_coords(self,atm):
+        if atm == {}:
+            return "(0,0,0)"
+        return f"({atm['x']},{atm['y']},{atm['z']})"
+    
+    def get_atm_key(self,key):
+        #A:709@C.A
+        try:
+            sx = key.split("@")
+            s01 = sx[0].split(":")
+            s23 = sx[1].split(".")
+            ch,rid,am,ver = s01[0],s01[1],s23[0],s23[1]            
+            for atm in self.lines:                                
+                if atm["chain"] == ch:
+                    if int(atm["rid"]) == int(rid):
+                        if atm["atm"] == am:
+                            if atm["version"] == ver: 
+                                return atm
+        except Exception as e:
+            print("Error finding key",key,e)
+            return {}
 
 
     def dataFrame(self):        
@@ -117,6 +148,42 @@ class PdbObject(object):
                     'x':atm.x, 'y':atm.y, 'z':atm.z}
                     dicdfs.append(dic)
         return pd.DataFrame.from_dict(dicdfs)
+    
+    # if we add lines from a cif file I will do something different    
+    def add_line_string(self,aid, rid, aa, am, ch, ver, x, y, z, occ, bf, ele):
+        #ATOM    435  OE1AGLU A  23      12.418  13.330   0.541  0.58  7.57           O  
+        #if "ATOM" in line[:6] or "HETATM" in line[:8]:                        
+            #aid = line[6:12].strip()
+            #am = line[12:16].strip()
+            #ver = line[16:17].strip()
+            #aa = line[17:21].strip()
+            #ch = line[21:23].strip()
+            #rid = line[23:29].strip()
+            #x = line[29:38].strip()
+            #y = line[38:46].strip()
+            #z = line[46:54].strip()
+            #occ = line[54:60].strip()
+            #bf = line[60:66].strip()
+            #ele = line[66:].strip()
+        atm = {}
+        atm["rid"] = rid
+        atm["aid"] = aid
+        atm["aa"] = aa
+        atm["atm"] = am
+        atm["chain"] = ch
+        if ver == "":
+            ver = "A"
+        atm["version"] = ver            
+        atm["x"] = x
+        atm["y"] = y
+        atm["z"] = z
+        atm["occupancy"] = occ
+        atm["bfactor"] = bf
+        atm["element"] = ele        
+        self.lines.append(atm)
+        #if "HETATM" in line[:8]:
+        #    print(line)
+        #    print(atm)
 
     
 ###################################################################################################################
