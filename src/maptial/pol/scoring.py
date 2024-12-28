@@ -9,28 +9,23 @@ import math
 import numpy as np
 
 ### Factory method for creation ##############################################################
-def create_scoring(method, interpA, interpB,log_level=0):
-    """
-    Factory method to create scoring function classes.
-
-    Parameters
-    ----------
-    method : string
-        The name of the scoring function method, least squares, abs val...
-    interpA : an interpolator
-        The interpolator that contains the full matrix of values which is the template
-    interpB : an interpolator
-        The interpolator that contains the full matrix of values that we are comparing
+def create_scoring(method, interpA, interpB,log_level=0):    
+    #Factory method to create scoring function classes.
+    #Parameters
+    #----------
+    #method : string
+    #    The name of the scoring function method, least squares, abs val...
+    #interpA : an interpolator
+    #    The interpolator that contains the full matrix of values which is the template
+    #interpB : an interpolator
+    #    The interpolator that contains the full matrix of values that we are comparing
     
-    log_level : int=0
-        How much logging you want to see
-
-    Return
-    ------
-    scorer
-
-    """
-    
+    #log_level : int=0
+    #    How much logging you want to see
+    #Return
+    #------
+    #scorer
+        
     if log_level > 0:
         print("Scoring:",method)
                                         

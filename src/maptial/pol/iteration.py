@@ -9,29 +9,26 @@ import math
 import numpy as np
 
 ### Factory method for creation ##############################################################
-def create_iteration(method,scoring,pointsA,pointsB,log_level=0):
-    """
-    Factory method to create iteration of image registration classes.
+def create_iteration(method,scoring,pointsA,pointsB,log_level=0):    
+    #Factory method to create iteration of image registration classes.
 
-    Parameters
-    ----------
-    method : string
-        The name of the scoring function method, least squares, abs val...
-    scoring : a scoring function
-        a scoring function that contains the interpolators        
-    pointsA : 3 xyz points list
-        the central, linear, plnar points for the reference image that we are minimising to
-    pointsB : 3 xyz points list
-        the initial start of the points that we are minimising to
-    log_level : int=0
-        How much logging you want to see
+    #Parameters
+    #----------
+    #method : string
+    #    The name of the scoring function method, least squares, abs val...
+    #scoring : a scoring function
+    #    a scoring function that contains the interpolators        
+    #pointsA : 3 xyz points list
+    #    the central, linear, plnar points for the reference image that we are minimising to
+    #pointsB : 3 xyz points list
+    #    the initial start of the points that we are minimising to
+    #log_level : int=0
+    #    How much logging you want to see
 
-    Return
-    ------
-    iteration
-
-    """
-    
+    #Return
+    #------
+    #iteration
+        
     if log_level > 0:
         print("Iteration:",method)
                                         
