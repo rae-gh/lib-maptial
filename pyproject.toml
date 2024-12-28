@@ -5,6 +5,15 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 [project]
+name = "maptial"
+description = "Library to calculate density and potential maps from protein structures, and to calculate geoemetric properties of protein structures."
+readme = "README.md"
+authors = [
+    { name = "Rachel Alcraft", email = "Rachel.Alcraft@gmail.com" },    
+]
+maintainers = [
+    { name = "Rachel Alcraft", email = "Rachel.Alcraft@gmail.com" },        
+]
 requires-python = ">=3.6"
 dependencies = [
   "biopython=1.81",
