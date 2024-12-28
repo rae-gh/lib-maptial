@@ -1,0 +1,11 @@
+biopython
+pandas
+numpy
+scipy
+matplotlib
+plotly
+ruff
+pytest
+twine
+build
+prometry
