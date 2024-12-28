@@ -3,17 +3,14 @@
 import numpy as np
 
 class Matrix3d(object):
-    def __init__(self, width,length,depth=1):
-        """
-        An arbitrary typed 3d object
-
-        Paramaters
-        -----------
-        width : int
-        length : int
-        depth : int = 1
-
-        """
+    def __init__(self, width,length,depth=1):        
+        #An arbitrary typed 3d object
+        #Paramaters
+        #-----------
+        #width : int
+        #length : int
+        #depth : int = 1
+        
         self.matrix = []
         self.width = width
         self.length = length
