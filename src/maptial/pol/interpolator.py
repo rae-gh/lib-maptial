@@ -13,33 +13,24 @@ from . import iv1
 from . import iv3
 from . import iv5
 
-
-
-
 ### Factory method for creation ##############################################################
-def create_interpolator(method, values, FMS, as_sd=0, log_level=0):
-    """
-    Factory method to create interpolator classes.
-
-    Parameters
-    ----------
-    method : string
-        The name of the interpolation method, nearest/linear/cubic/bspline
-    values : numpy 3d array
-        The matrix values, 0 indexed 3d
-    FMS : a tuple (F,M,S) of ints
-        The dimensions of the data
-    as_sd : int (0,1,2)
-        The choice of whether to turn the data into a z-distribution (1) or z=dist with 0 preserved (2)
-    log_level : int=0
-        How much logging you want to see
-
-    Return
-    ------
-    None
-
-    """
-
+def create_interpolator(method, values, FMS, as_sd=0, log_level=0):    
+    #Factory method to create interpolator classes.
+    #Parameters
+    #----------
+    #method : string
+    #    The name of the interpolation method, nearest/linear/cubic/bspline
+    #values : numpy 3d array
+    #    The matrix values, 0 indexed 3d
+    #FMS : a tuple (F,M,S) of ints
+    #    The dimensions of the data
+    #as_sd : int (0,1,2)
+    #    The choice of whether to turn the data into a z-distribution (1) or z=dist with 0 preserved (2)
+    #log_level : int=0
+    #    How much logging you want to see
+    #Return
+    #------
+    #None    
     if as_sd > 0:#0 = no change, 1 = z-distribution, 2 = z-dist and tranpose
         # Make a z-distribtion
         sd = np.std(values)
