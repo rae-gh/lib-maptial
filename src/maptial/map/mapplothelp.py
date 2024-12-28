@@ -1,9 +1,8 @@
-"""
-RSA 17/03/23
-This helper function makes it easier to plot for demonstrations and examples, paritclarly on the colab page
+#####################################################################
+#RSA 17/03/23
+#This helper function makes it easier to plot for demonstrations and examples, paritclarly on the colab page
+#####################################################################
 
-
-"""
 from maptial.xyz import spacetransform as space
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
@@ -26,21 +25,20 @@ class MapPlotHelp(object):
     def make_plot_slice_3d(self,vals,min_percent=1, max_percent=1,
                             hue="GBR",title="Leucippus Plot 3d",levels=20,
                             transparency="medium"):
-        """
-        Takes a mat3d object and plots it in plotly
+        
+        #Takes a mat3d object and plots it in plotly
 
-        Input
-        ---------
-        vals : mat3d
-        min_percent : 1
-        max_percent : 1
-        hue : GBR/GRB/BW/WB/RB/BR/GI/IG/MASK
-        title : "Leucippud Plot 3d
-        levels : 20
-        """
-
+        #Input
+        #---------
+        #vals : mat3d
+        #min_percent : 1
+        #max_percent : 1
+        #hue : GBR/GRB/BW/WB/RB/BR/GI/IG/MASK
+        #title : "Leucippud Plot 3d
+        #levels : 20        
         #https://plotly.com/python/3d-isosurface-plots/
         #turn data into scatter for iso_surface
+        
         xs = []
         ys = []
         zs = []
@@ -120,28 +118,27 @@ class MapPlotHelp(object):
                             naybs=[],min_percent=1, max_percent=1,
                             hue="GBR",levels=20,title="Leucippus Plot 2d",samples=-1,width=-1,
                             transparency="no"):
-        """
-        Takes a mat2d object and plots it in plotly
+        
+        #Takes a mat2d object and plots it in plotly
 
-        Input
-        ---------
-        vals : mat2d
-        plottype : "countour" or heatmap
-        points : [] a selection of points to add ontop of plot
-        naybs : [] neighbours matched per value points
-        min_percent : 1
-        max_percent : 1
-        hue : GBR/GRB/BW/WB/RB/BR/GI/IG/MASK
-        title : "Leucippud Plot 2d
-        levels : 20
-        samples :-1 needed to place the points in the right place
-        width : -1 needed to place the points in the right place
-        """        
+        #Input
+        #---------
+        #vals : mat2d
+        #plottype : "countour" or heatmap
+        #points : [] a selection of points to add ontop of plot
+        #naybs : [] neighbours matched per value points
+        #min_percent : 1
+        #max_percent : 1
+        #hue : GBR/GRB/BW/WB/RB/BR/GI/IG/MASK
+        #title : "Leucippud Plot 2d
+        #levels : 20
+        #samples :-1 needed to place the points in the right place
+        #width : -1 needed to place the points in the right place
+        
         #https://plotly.com/python/3d-isosurface-plots/
         #turn data into scatter for iso_surface        
-        vals = vals2d.tolist()
-        #print(type(vals))
         
+        vals = vals2d.tolist()                
         fig = make_subplots(rows=1, cols=1,subplot_titles=[title],horizontal_spacing=0.05,vertical_spacing=0.05)
 
         mind,maxd = 1000,-1000    
