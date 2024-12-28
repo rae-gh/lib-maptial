@@ -1,14 +1,13 @@
 
-"""
-RSA 16/4/23
-Thread safe implementation of the Singleton Pattern
-https://medium.com/analytics-vidhya/how-to-create-a-thread-safe-singleton-class-in-python-822e1170a7f6
-See also: https://python-patterns.guide/gang-of-four/singleton/
+###################################################
+#RSA 16/4/23
+#Thread safe implementation of the Singleton Pattern
+#https://medium.com/analytics-vidhya/how-to-create-a-thread-safe-singleton-class-in-python-822e1170a7f6
+#See also: https://python-patterns.guide/gang-of-four/singleton/
 
-This is intended to be the only access point to load maps
------------------------------------------------------
-
- """
+#This is intended to be the only access point to load maps
+#-----------------------------------------------------
+###################################################
 
 import threading #https://stackoverflow.com/questions/2905965/creating-threads-in-python
 import datetime
