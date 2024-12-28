@@ -16,7 +16,7 @@ maintainers = [
 ]
 requires-python = ">=3.6"
 dependencies = [
-  "biopython=1.81",
+  "biopython==1.81",
   "pandas",
   "numpy",
   "scipy",
