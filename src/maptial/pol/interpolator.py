@@ -155,7 +155,8 @@ class Interpolator(ABC):
             d2x = (xyz_vals[i+1] + xyz_vals[i+2] - 2 * val) / (self.h * self.h)
             d2y = (xyz_vals[i+3] + xyz_vals[i+4] - 2 * val) / (self.h * self.h)
             d2z = (xyz_vals[i+5] + xyz_vals[i+6] - 2 * val) / (self.h * self.h)                
-            vals.append(self.make_criticalpoint(d2x,d2y,d2z))
+            rad = self.get_radient(d2x,d2y,d2z)
+            vals.append(self.make_criticalpoint(d2x,d2y,d2z,rad))
         return vals
 
     def get_radients_individual(self, xyz):
@@ -188,15 +189,15 @@ class Interpolator(ABC):
         laplacian = ddx + ddy + ddz 
         return laplacian
         
-    def make_criticalpoint(self,ddx,ddy,ddz):
-        #TOLERANCE = 10000000
+    def make_criticalpoint(self,ddx,ddy,ddz, rad):
+        TOLERANCE = 0.75
         cp = 0
-        #if abs(ddx + ddy + ddz) < TOLERANCE:
-        for dd in [ddx,ddy,ddz]:
-            if dd < 0:                    
-                cp -= 1
-            else:
-                cp += 1                    
+        if abs(rad) < TOLERANCE:
+            for dd in [ddx,ddy,ddz]:
+                if dd < 0:                    
+                    cp -= 1
+                else:
+                    cp += 1                    
         return cp
 
     def get_radients_extended_list(self, xyz):
@@ -277,7 +278,8 @@ class Interpolator(ABC):
         xx = self.getDxDx_numerical(x, y, z, val)
         yy = self.getDyDy_numerical(x, y, z, val)
         zz = self.getDzDz_numerical(x, y, z, val)
-        return self.make_criticalpoint(xx,yy,zz)
+        rad = self.get_radient(xx,yy,zz)
+        return self.make_criticalpoint(xx,yy,zz, rad)
         
     def getDxDx_numerical(self, x, y, z, val):        
         xa,ya,za = x - self.h, y, z#self.get_adjusted_fms_maybe(x - self.h, y, z)
@@ -813,7 +815,8 @@ class Multivariate(Interpolator):
         ddx = self.get_value_multivariate(zn, yn, xn, coeffs,["x","x"])
         ddy = self.get_value_multivariate(zn, yn, xn, coeffs,["y","y"])
         ddz = self.get_value_multivariate(zn, yn, xn, coeffs,["z","z"])
-        return self.make_criticalpoint(ddx,ddy,ddz)
+        rad = self.get_radient(ddx,ddy,ddz)
+        return self.make_criticalpoint(ddx,ddy,ddz, rad)
         
     def get_values(self, xyz):                
         return self.get_values_list(xyz)

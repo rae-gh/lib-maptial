@@ -324,7 +324,7 @@ class MapPlotHelp(object):
             else:
                 return [(0,midnight),(d0,ghost),(1.0,maroon)]
         elif hue == "CP":            
-            return [(0,maroon),(0.45,coral),(0.5,grey),(0.55,sky),(1.0,midnight)]            
+            return [(0,maroon),(0.45,coral),(0.48,black),(0.52,black),(0.55,sky),(1.0,midnight)]            
         elif hue == "R":
             if d0 <= 0:
                 return [(0,maroon),(0.5,ghost),(1.0,midnight)]
