@@ -6,6 +6,7 @@ https://pynative.com/make-python-class-json-serializable/#:~:text=Use%20toJSON()
 
 from maptial.xyz import vectorthree as v3
 import pandas as pd
+import json
 
 amino_acids = ["ala","arg","asn","asp","cys","gln","glu","gly","his","ile","leu","lys","met","phe","pro","ser","thr","trp","tyr","val"]
 class PdbObject(object):
@@ -151,8 +152,63 @@ class PdbObject(object):
         except Exception as e:
             print("Error finding key",key,e)
             return {}
+        
+    def get_key(self,atm):
+        if atm == {}:
+            return ""
+        #A:709@C.A
+        return f"{atm['chain']}:{atm['rid']}@{atm['atm']}.{atm['version']}"
+    
+    def get_description(self,atm,dis):
+        if atm == {}:
+            return ""
+        #A:709@C.A
+        return f"{round(dis,3)}:{atm['aa']}:{atm['chain']}:{atm['rid']}@{atm['atm']}.{atm['version']}"
+    
+    def get_next_key(self,key, offset=1):
+        try:
+            if len(key) < 4:
+                return ""
+            atm = self.get_atm_key(key)
+            ridn = int(atm["rid"]) + offset
+            return f"{atm['chain']}:{ridn}@{atm['atm']}.{atm['version']}"
+        except:
+            return ""
 
-
+    def get_atom_coords(self):
+        atoms = []
+        for atm in self.lines:
+            coord = v3.VectorThree(atm["x"],atm["y"],atm["z"])
+            atoms.append(coord)
+        return atoms
+    
+    def get_inscope_atoms(self,anchor,distance,log_level=0):
+        in_scope = []
+        for atm in self.lines:
+            crd = v3.VectorThree(float(atm["x"]),float(atm["y"]),float(atm["z"]))
+            dis = anchor.distance(crd)
+            if dis <= distance:
+                in_scope.append(atm)
+                if log_level > 0:                        
+                    print("neighbour in scope", self.get_description(atm,dis))
+        return in_scope
+    
+    def get_neighbours(self,coord,rnge,atoms=None,ishtml=False):
+        a = ""
+        if atoms == None:
+            atoms = self.lines
+        for atm in atoms:
+            crd = v3.VectorThree(float(atm["x"]),float(atm["y"]),float(atm["z"]))
+            dis = coord.distance(crd)
+            if dis >= rnge[0] and dis <= rnge[1]:
+                desc = self.get_description(atm,dis)
+                if desc not in a:
+                    if ishtml:
+                        a+="<br>......"+ desc
+                    else:
+                        a+="\n......"+desc
+        return a
+    ##################################################################################
     def dataFrame(self):        
         dicdfs = []        
         for chain,resdic in self.chains.items():
@@ -201,6 +257,15 @@ class PdbObject(object):
         #if "HETATM" in line[:8]:
         #    print(line)
         #    print(atm)
+
+    #################################
+    def toJson(self):
+        return json.dumps(self, default=lambda o: o.__dict__)
+    
+    def fromJson(self, jsndic):    
+        self.pdb_code = jsndic["pdb_code"]
+        self.lines = jsndic["lines"]
+
 
     
 ###################################################################################################################
@@ -376,3 +441,4 @@ class PdbAtom:
                         return False
                 
         return True
+    
