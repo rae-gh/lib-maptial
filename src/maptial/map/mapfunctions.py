@@ -151,17 +151,17 @@ class MapFunctions(object):
         sorted_crs = sorted(crss,key=itemgetter(1))
         xs,ys,zs,vs = [],[],[],[]
         for co,va in sorted_crs:
-            xs.append(co.A)
-            ys.append(co.B)
-            zs.append(co.C)
-            vs.append(va)
+            xs.append(float(co.A))
+            ys.append(float(co.B))
+            zs.append(float(co.C))
+            vs.append(float(va))
                         
-            minx = math.floor(min(minx,float(co.A)))
-            maxx = math.ceil(max(maxx,float(co.A)))
-            miny = math.floor(min(miny,float(co.B)))
-            maxy = math.ceil(max(maxy,float(co.B)))
-            minz = math.floor(min(minz,float(co.C)))
-            maxz = math.ceil(max(maxz,float(co.C)))                     
+            minx = float(math.floor(min(minx,float(co.A))))
+            maxx = float(math.ceil(max(maxx,float(co.A))))
+            miny = float(math.floor(min(miny,float(co.B))))
+            maxy = float(math.ceil(max(maxy,float(co.B))))
+            minz = float(math.floor(min(minz,float(co.C))))
+            maxz = float(math.ceil(max(maxz,float(co.C)))  )                   
         
         return xs,ys,zs,vs,(minx,maxx),(miny,maxy),(minz,maxz)
     

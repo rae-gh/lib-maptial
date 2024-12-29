@@ -311,11 +311,11 @@ class Interpolator(ABC):
     def get_projection(self,slice,xmin=-1,xmax=-1,ymin=-1,ymax=-1):
         vals = None        
         if slice == "xy":        
-            vals = self._orig.max(axis=(2))
+            vals = self._orig.max(axis=(2)).astype(float)
         elif slice == "yz":        
-            vals = self._orig.max(axis=(0))
+            vals = self._orig.max(axis=(0)).astype(float)
         elif slice == "zx":        
-            vals = self._orig.max(axis=(1))
+            vals = self._orig.max(axis=(1)).astype(float)
         
         if xmin == -1 and xmax == -1 and ymin == -1 and ymax == -1:
             return vals
