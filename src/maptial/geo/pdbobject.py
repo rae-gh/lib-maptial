@@ -106,7 +106,24 @@ class PdbObject(object):
                 return True, atm
         return False, None
     
-    # MAP interface
+    ######## MAP interface #####################
+    def get_first_three(self):
+        atm1, atm2, atm3 = {},{},{}
+        count = 0
+        for atm in self.lines:
+            if atm["atm"] == "CA" and (atm["version"] == "A" or atm["version"] == ""):
+                atm1 = atm
+                count += 1
+            elif atm["atm"] == "C" and (atm["version"] == "A" or atm["version"] == ""):
+                atm2 = atm
+                count += 1
+            elif atm["atm"] == "O" and (atm["version"] == "A" or atm["version"] == ""):
+                atm3 = atm
+                count += 1
+            if count == 3:
+                return atm1,atm2,atm3
+        return atm1,atm2,atm3
+    
     def get_coords_key(self,key):
         atm = self.get_atm_key(key)
         if atm == {} or atm == None:
