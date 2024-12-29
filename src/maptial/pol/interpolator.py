@@ -660,6 +660,9 @@ class Nearest(Interpolator):
     
     def get_laplacian(self, x, y, z):
         return 0
+    
+    def get_criticalpoint(self, x, y, z):
+        return 0
 
     def get_values(self, xyz):                
         return self.get_values_list(xyz)
@@ -671,6 +674,12 @@ class Nearest(Interpolator):
         return vals
         
     def get_laplacians(self, xyz):
+        vals = []
+        for x,y,z in xyz:
+            vals.append(0)
+        return vals
+    
+    def get_criticalpoints(self, xyz):
         vals = []
         for x,y,z in xyz:
             vals.append(0)
@@ -704,6 +713,9 @@ class Numpest(Interpolator):
     def get_laplacian(self, x, y, z):
         return 0
     
+    def get_criticalpoint(self, x, y, z):
+        return 0
+    
     def get_values(self, xyz): 
         xyz = self.adj_values_list(xyz)               
         fn = RegularGridInterpolator((self.x_volume,self.y_volume,self.z_volume), self._npy,method="nearest")
@@ -717,6 +729,12 @@ class Numpest(Interpolator):
         return vals
         
     def get_laplacians(self, xyz):
+        vals = []
+        for x,y,z in xyz:
+            vals.append(0)
+        return vals
+    
+    def get_criticalpoints(self, xyz):
         vals = []
         for x,y,z in xyz:
             vals.append(0)
@@ -746,6 +764,9 @@ class Linear(Interpolator):
         return self.get_radient_numerical(x,y,z)
     
     def get_laplacian(self, x, y, z):
+        return 0
+    
+    def get_criticalpoint(self, x, y, z):
         return 0
     
     def get_values(self, xyz):                

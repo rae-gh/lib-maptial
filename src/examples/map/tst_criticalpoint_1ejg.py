@@ -20,7 +20,7 @@ linear_atoms = ["A:40@SG.A","A:32@SG.A","A:26@SG.A"]
 planar_atoms = ["A:3@O.A","A:4@O.A","A:16@O.A"]
 interpolation = "bspline"
 width = 10
-samples = 100
+samples = 200
 
 mman.MapsManager().set_dir(DATADIR)
 ml = mman.MapsManager().get_or_create(pdb_code,file=1,header=1,values=1,cif=False)
