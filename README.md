@@ -1,5 +1,10 @@
 # lib-maptial
 
+## INSTALL
+```
+python -m pip install maptial
+```
+
 ## For developers
 
 ### Either create a virtual environment
